@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="626b30fa-4382-4e9c-9dd5-f9596195592b" name="novel" url="http://120.79.235.110">
+        <fileTransfer host="120.79.235.110" port="21" password="dfc1dfcbdfe6dfcbdf9fdf92dfe1dfdedfc1dffd" username="jianfu">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="dd5b45f9-86b4-450c-8186-27ced3daf043" name="img" url="http://120.79.235.110">
+        <fileTransfer host="120.79.235.110" port="21" username="jianfu2">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

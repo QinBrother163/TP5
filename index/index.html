@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="__MODULE_CSS__/personal.css">
+    <link rel="stylesheet" href="__MODULE_CSS__/swipeslider.css">
+    <title>{$htitle}</title>
+    <script type="text/javascript">
+        !function () {
+            var a = "@charset \"utf-8\";html{color:#000;background:#fff;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html *{outline:0;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}html,body{font-family:sans-serif}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0}input,select,textarea{font-size:100%}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}abbr,acronym{border:0;font-variant:normal}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:500}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500}q:before,q:after{content:''}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}ins,a{text-decoration:none}",
+                    b = document.createElement("style");
+            if (document.getElementsByTagName("head")[0].appendChild(b), b.styleSheet) b.styleSheet.disabled || (b.styleSheet.cssText = a); else try {
+                b.innerHTML = a
+            } catch (c) {
+                b.innerText = a
+            }
+        }();
+        !function (a, b) {
+            function c() {
+                var b = f.getBoundingClientRect().width;
+                b / i > 540 && (b = 540 * i);
+                var c = b / 10;
+                f.style.fontSize = c + "px", k.rem = a.rem = c
+            }
+
+            var d, e = a.document, f = e.documentElement, g = e.querySelector('meta[name="viewport"]'),
+                    h = e.querySelector('meta[name="flexible"]'), i = 0, j = 0, k = b.flexible || (b.flexible = {});
+            if (g) {
+                console.warn("将根据已有的meta标签来设置缩放比例");
+                var l = g.getAttribute("content").match(/initial\-scale=([\d\.]+)/);
+                l && (j = parseFloat(l[1]), i = parseInt(1 / j))
+            } else if (h) {
+                var m = h.getAttribute("content");
+                if (m) {
+                    var n = m.match(/initial\-dpr=([\d\.]+)/), o = m.match(/maximum\-dpr=([\d\.]+)/);
+                    n && (i = parseFloat(n[1]), j = parseFloat((1 / i).toFixed(2))), o && (i = parseFloat(o[1]), j = parseFloat((1 / i).toFixed(2)))
+                }
+            }
+            if (!i && !j) {
+                var p = (a.navigator.appVersion.match(/android/gi), a.navigator.appVersion.match(/iphone/gi)),
+                        q = a.devicePixelRatio;
+                i = p ? q >= 3 && (!i || i >= 3) ? 3 : q >= 2 && (!i || i >= 2) ? 2 : 1 : 1, j = 1 / i
+            }
+            if (f.setAttribute("data-dpr", i), !g)if (g = e.createElement("meta"), g.setAttribute("name", "viewport"), g.setAttribute("content", "initial-scale=" + j + ", maximum-scale=" + j + ", minimum-scale=" + j + ", user-scalable=no"), f.firstElementChild) f.firstElementChild.appendChild(g); else {
+                var r = e.createElement("div");
+                r.appendChild(g), e.write(r.innerHTML)
+            }
+            a.addEventListener("resize", function () {
+                clearTimeout(d), d = setTimeout(c, 300)
+            }, !1), a.addEventListener("pageshow", function (a) {
+                a.persisted && (clearTimeout(d), d = setTimeout(c, 300))
+            }, !1), "complete" === e.readyState ? e.body.style.fontSize = 12 * i + "px" : e.addEventListener("DOMContentLoaded", function () {
+                e.body.style.fontSize = 12 * i + "px"
+            }, !1), c(), k.dpr = a.dpr = i, k.refreshRem = c, k.rem2px = function (a) {
+                var b = parseFloat(a) * this.rem;
+                return "string" == typeof a && a.match(/rem$/) && (b += "px"), b
+            }, k.px2rem = function (a) {
+                var b = parseFloat(a) / this.rem;
+                return "string" == typeof a && a.match(/px$/) && (b += "rem"), b
+            }
+        }(window, window.lib || (window.lib = {}));
+    </script>
+</head>
+<body style="font-size: 12px;">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     style="position: absolute; width: 0; height: 0" id="__SVG_SPRITE_NODE__">
+    <symbol viewBox="0 0 44 44" id="right"><title>Operation Icons Copy 4</title>
+        <defs>
+            <path id="right_a" d="M-129-845h24v24h-24z"></path>
+        </defs>
+        <clipPath id="right_b">
+            <use xlink:href="#right_a" overflow="visible"></use>
+        </clipPath>
+        <g clip-path="url(#right_b)">
+            <defs>
+                <path id="right_c" d="M-903-949H947V996H-903z"></path>
+            </defs>
+            <clipPath id="right_d">
+                <use xlink:href="#right_c" overflow="visible"></use>
+            </clipPath>
+        </g>
+        <path d="M30.601 21.399L18.368 9.166l-2.121 2.121 10.118 10.119-10.118 10.118 2.121 2.121 12.233-12.233-.006-.006z"></path>
+    </symbol>
+</svg>
+<div id="root">
+
+    <div data-reactroot="" class="page-style3 page-style3-male">
+        <div class="home3 home3-male">
+            <div class="home3-top-block">
+                <div class="top-search clearfix">
+                    <div class="style3-sex-tab">
+                        <a href="{:url('cms/index/index', ['s' => 2])}"><span class="channel-item " id="girl">女生</span></a>
+                        <a href="{:url('cms/index/index', ['s' => 1])}"><span id="boy" class="channel-item ">男生</span></a>
+                    </div>
+                    <span class="search-icon"></span>
+                </div>
+                <div class=" ">
+                    <div class="slide-wrap">
+                        <figure id="full_feature" class="swipslider">
+                            <ul class="sw-slides">
+                                {volist name="bannerList" id="item"}
+                                {neq name="item.zid" value="0"}
+                                <li class="sw-slide" data-url="{:url('cms/document/detail', ['id' => $item.zid])}">
+                                    {else/}
+                                <li class="sw-slide" data-url="{:url('cms/column/book', ['id' => $item.bid])}">
+                                    {/neq}
+                                    <img src="{$item.pic|get_thumb}" alt="{$item.title}">
+                                </li>
+                                {/volist}
+                            </ul>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="home3-block home3-recommends"><h3 class="clearfix h3after">主编推荐</h3>
+                <div class="block-content clearfix">
+                    <div class="recommends-main">
+                        {volist name="zhubian_list" id="vo" offset="0" length='4'}<a class="home3-book-item" href="{:url('cms/column/book', ['id' => $vo['id']])}"><div class="img"><img src="{$vo.image|get_thumb}"></div><span class="name">{$vo.title}</span></a>{/volist}
+                    </div>
+                    <div class="recommends-more">
+                        {volist name="zhubian_list" id="vo" offset="4" length='6'}
+                        <a class="recommends-text" href="{:url('cms/column/book', ['id' => $vo['id']])}">
+                        <h4>{$vo.title}</h4>
+                        <p>{$vo.desc}</p>
+                        </a>
+                        {/volist}
+                    </div>
+                </div>
+            </div>
+            <div class="home3-block home3-new-book"><h3 class="clearfix h3after">新书推荐</h3>
+                <div class="block-content clearfix">
+                    <div class="recommends-main">
+                        {volist name="newBook" id="vo" offset="0" length='4'}<a class="home3-book-item" href="{:url('cms/column/book', ['id' => $vo['id']])}"><div class="img"><img src="{$vo.image|get_thumb}"></div><span class="name">{$vo.title}</span></a>{/volist}
+                    </div>
+                    <div class="recommends-more">
+                        {volist name="newBook" id="vo" offset="4" length='6'}
+                        <a class="recommends-text" href="{:url('cms/column/book', ['id' => $vo['id']])}">
+                            <h4>{$vo.title}</h4>
+                            <p>{$vo.desc}</p>
+                        </a>
+                        {/volist}
+                    </div>
+                </div>
+            </div>
+            <div class="home3-block home3-top-list">
+                <h3 class="clearfix h3after">排行榜
+                    <a class="more active" href="{:url('cms/column/ranking')}">更多
+                        <svg class="am-icon am-icon-right am-icon-xs">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#right"></use>
+                        </svg>
+                    </a>
+                </h3>
+                <div></div>
+                <div class="btn-groups am-segment" role="tablist">
+                    <div class="am-segment-item" role="tab" aria-selected="false" aria-disabled="false">
+                        <div class="am-segment-item-inner" style="background-color: rgb(58, 92, 162);"></div>
+                        点击榜
+                    </div>
+                    <div class="am-segment-item am-segment-item-selected" role="tab" aria-selected="true"
+                         aria-disabled="false">
+                        <div class="am-segment-item-inner" style="background-color: rgb(58, 92, 162);"></div>
+                        畅销榜
+                    </div>
+                    <div class="am-segment-item" role="tab" aria-selected="false" aria-disabled="false">
+                        <div class="am-segment-item-inner" style="background-color: rgb(58, 92, 162);"></div>
+                        打赏榜
+                    </div>
+                </div>
+
+                <div class="block-content clearfix tab-content" style="display: none">
+                    {volist name="viewOrder" id="item"}
+                    <div class="home3-top-item hom3-top-item-male">
+                        <div class="img">
+                            <a href="{:url('cms/column/book', ['id' => $item['id']])}">
+                                <img src="{$item.image|get_thumb}">
+                            </a>
+                        </div>
+                        <div class="name">{$item.title}</div>
+                        <div class="style3-top-tag num-1">{$i}</div>
+                    </div>
+                    {/volist}
+                    <div class="list-bg"></div>
+                </div>
+                <!--内容2-->
+                <div class="block-content clearfix tab-content">
+                    {volist name="scoreOrder" id="item"}
+                    <div class="home3-top-item hom3-top-item-male">
+                        <div class="img">
+                            <a href="{:url('cms/column/book', ['id' => $item['id']])}">
+                                <img src="{$item.image|get_thumb}">
+                            </a>
+                        </div>
+                        <div class="name">{$item.title}</div>
+                        <div class="style3-top-tag num-1">{$i}</div>
+                    </div>
+                    {/volist}
+                    <div class="list-bg"></div>
+                </div>
+                <!--内容3-->
+                <div class="block-content clearfix tab-content" style="display: none">
+                    {volist name="tipsOrder" id="item"}
+                    <div class="home3-top-item hom3-top-item-male">
+                        <div class="img">
+                            <a href="{:url('cms/column/book', ['id' => $item['id']])}">
+                                <img src="{$item.image|get_thumb}">
+                            </a>
+                        </div>
+                        <div class="name">{$item.title}</div>
+                        <div class="style3-top-tag num-1">{$i}</div>
+                    </div>
+                    {/volist}
+                    <div class="list-bg"></div>
+                </div>
+            </div>
+            <div class="home3-block">
+                <h3 class="clearfix h3after"><!-- react-text: 96 -->小说精选<!-- /react-text -->
+                    <a class="more active" href="{:url('cms/column/selected')}">更多
+                        <svg class="am-icon am-icon-right am-icon-xs">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#right"></use>
+                        </svg>
+                    </a>
+                </h3>
+                <div class="block-content clearfix">
+                    {volist name="choicest" id="vo" length='6'}
+                    <div class="style3-book-item2 clearfix">
+                        <div class="img">
+                            <a href="{:url('cms/column/book', ['id' => $vo['id']])}">
+                                <img src="{$vo.image|get_thumb}">
+                            </a>
+                        </div>
+                        <div class="info">
+                            <a href="{:url('cms/column/book', ['id' => $vo['id']])}">
+                                <span class="name">{$vo.title}</span>
+                            </a>
+                            <div class="desc">
+                                <a href="{:url('cms/column/book', ['id' => $vo['id']])}">
+                                    {$vo.desc}
+                                </a>
+                            </div>
+                            <div class="count clearfix"><span class="author tag">{$vo.tstype}</span>
+                                <span class="status tag">{$vo.xstype}</span>
+                            </div>
+                        </div>
+                    </div>
+                    {/volist}
+                </div>
+            </div>
+            <div class="home3-block home3-timefree">
+                <h3 class="clearfix h3after">
+                    限时免费
+                </h3>
+                <div class="block-content clearfix">
+                    {volist name="free_list" id="vo" length='6'}<a class="home3-book-item large" href="{:url('cms/column/book', ['id' => $vo['id']])}"><i class="timeTag"></i><div class="img"><img src="{$vo.image|get_thumb}"></div><span class="name">{$vo.title}</span></a>{/volist}
+                </div>
+            </div>
+            <div class="style3-home-nav">
+                <a href="{:url('cms/index/index')}">
+                    <img src="__MODULE_IMG__/../images/home-nav/1.png"><span>首页</span>
+                </a>
+                <a href="{:url('cms/column/ranking')}">
+                    <img src="__MODULE_IMG__/../images/home-nav/2.png"><span>榜单</span>
+                </a>
+                <a href="{:url('cms/pay/index')}">
+                    <img src="__MODULE_IMG__/../images/home-nav/3.png"><span>充值</span>
+                </a>
+                <a href="{:url('cms/user/index')}">
+                    <img src="__MODULE_IMG__/../images/home-nav/4.png"><span>个人中心</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="__MODULE_JS__/swipeslider.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        let cookie = {
+            set: function (key, val, time) {
+                var date = new Date();
+                var expiresDays = time;
+                date.setTime(date.getTime() + expiresDays * 24 * 3600 * 1000);
+                document.cookie = key + "=" + val + ";expires=" + date.toGMTString();
+            },
+            get: function (key) {
+
+                var getCookie = document.cookie.replace(/[ ]/g, "");
+                var arrCookie = getCookie.split(";");
+                var tips;
+                for (var i = 0; i < arrCookie.length; i++) {
+                    var arr = arrCookie[i].split("=");
+                    if (key == arr[0]) {
+                        tips = arr[1];
+                        break;
+                    }
+                }
+                return tips;
+            },
+            delete: function (key) {
+                var date = new Date();
+                date.setTime(date.getTime() - 10000);
+                document.cookie = key + "=v; expires =" + date.toGMTString();
+            }
+        };
+        let sex_type = cookie.get("ieasynet_home_s");
+        let root = document.getElementById('root');
+        let boy = document.getElementById('boy');
+        let girl = document.getElementById('girl');
+        let h3after = document.getElementsByClassName('h3after');
+        let h3A = document.getElementsByClassName('more');
+        let style3_top_tag = document.getElementsByClassName('style3-top-tag');
+        let dateBg = document.getElementsByClassName('time-item')[0];
+        let search_icon = root.querySelector('.search-icon');
+        let am_segment_item = document.getElementsByClassName('am-segment-item');
+
+        $(document).on('click', '.sw-slide', function(){
+            var url = $(this).data('url');
+            location.href = url;
+        });
+        function tabEffect(am_segment_item, tabEffect1, tabEffect2) {
+
+            let tab_content = document.getElementsByClassName('tab-content');
+            for (let i=0; i<am_segment_item.length;i++){
+                am_segment_item[i].index = i;
+
+                am_segment_item[0].className = tabEffect2;
+                am_segment_item[1].className = tabEffect1;
+                am_segment_item[2].className = tabEffect2;
+
+                tab_content[0].style.display = 'none';
+                tab_content[1].style.display = 'block';
+                tab_content[2].style.display = 'none';
+
+                am_segment_item[i].onclick = function () {
+                    for (let i = 0; i < am_segment_item.length; i++) {
+                        am_segment_item[i].className = tabEffect2;
+                        tab_content[i].style.display = 'none';
+                    }
+                    this.className = tabEffect1;
+                    tab_content[this.index].style.display = 'block';
+                }
+            }
+        }
+        function setBgImg(img,num1,num2,num3) {
+            for (let i = 0; i < style3_top_tag.length; ++i) {
+
+                if (i<6){
+                    if (i<3){
+                        style3_top_tag[i].style.backgroundImage = 'url(__MODULE_IMG__/../images/style3-top'+ (i + num1) +'.png)';
+                    }else{
+                        style3_top_tag[i].style.backgroundImage = 'url(__MODULE_IMG__/../images/style3-'+ img +'.png)';
+                    }
+
+                }
+
+                if (i>5  &&  i<12){
+
+                    if (i>5 && i<10){
+                        style3_top_tag[i].style.backgroundImage = 'url(__MODULE_IMG__/../images/style3-top'+ (i - num2) +'.png)';
+                    }else{
+                        style3_top_tag[i].style.backgroundImage = 'url(__MODULE_IMG__/../images/style3-'+ img +'.png)';
+                    }
+                }
+
+                if (i>11  &&  i<18){
+
+                    if (i>11  &&  i<16){
+
+                        style3_top_tag[i].style.backgroundImage = 'url(__MODULE_IMG__/../images/style3-top'+ (i - num3) +'.png)';
+                    }else{
+                        style3_top_tag[i].style.backgroundImage = 'url(__MODULE_IMG__/../images/style3-'+ img +'.png)';
+                    }
+                }
+            }
+        }
+
+
+
+        if(sex_type == 2){
+            boy.className = 'channel-item bg-active';
+            girl.className = 'channel-item';
+            search_icon.style.backgroundImage = 'url(__MODULE_IMG__/../images/ico/search.png)';
+            document.getElementsByClassName('page-style3')[0].className = 'page-style3 page-style3-male';
+            setBgImg(img = 'top8',5,1,7);
+            let tabEffect1 = 'am-segment-item am-segment-item-selected am-segment_item_selected_0';
+            let tabEffect2 = 'am-segment-item am-segment_item_selected_1';
+            tabEffect(am_segment_item, tabEffect1, tabEffect2);
+        }else{
+//            $('#girl').removeClass('bg-active');
+//            $('#girl').addClass('bg-active_girl');
+            boy.className = 'channel-item';
+            girl.className = 'channel-item bg-active_girl';
+            search_icon.style.backgroundImage = 'url(__MODULE_IMG__/../images/style3_search.png)';
+            document.getElementsByClassName('page-style3')[0].className = 'page-style3 page-style3-female';
+            setBgImg(img = 'top4',1,5,11);
+            let tabEffect1 = 'am-segment-item am-segment-item-selected am-segment_item_selected_00';
+            let tabEffect2 = 'am-segment-item am-segment_item_selected_11';
+            tabEffect(am_segment_item, tabEffect1, tabEffect2);
+        }
+
+
+//        var sex = $('.bg-active').attr('id');
+//        if(sex == 'boy'){
+//            search_icon.style.backgroundImage = 'url(__MODULE_IMG__/../images/ico/search.png)';
+//
+//            for (let i = 0; i < h3after.length; i++) {
+//                h3after[i].className = 'clearfix h3after boyH3';
+//            }
+//
+//            for (let i = 0; i < h3A.length; i++) {
+//                h3A[i].className = 'more act1ive boyA';
+//            }
+//
+//
+//            for (let i = 0; i < style3_top_tag.length; ++i) {
+//
+//                if (i<6){
+//                    if (i<3){
+//                        style3_top_tag[i].style.backgroundImage = 'url(__MODULE_IMG__/../images/style3-top'+ (i + 5) +'.png)';
+//                    }else{
+//                        style3_top_tag[i].style.backgroundImage = 'url(__MODULE_IMG__/../images/style3-top8.png)';
+//                    }
+//
+//                }
+//
+//                if (i>5  &&  i<12){
+//
+//                    if (i>5 && i<10){
+//                        style3_top_tag[i].style.backgroundImage = 'url(__MODULE_IMG__/../images/style3-top'+ (i - 1) +'.png)';
+//                    }else{
+//                        style3_top_tag[i].style.backgroundImage = 'url(__MODULE_IMG__/../images/style3-top8.png)';
+//                    }
+//                }
+//
+//                if (i>11  &&  i<18){
+//
+//                    if (i>11  &&  i<16){
+//
+//                        style3_top_tag[i].style.backgroundImage = 'url(__MODULE_IMG__/../images/style3-top'+ (i-7) +'.png)';
+//                    }else{
+//                        style3_top_tag[i].style.backgroundImage = 'url(__MODULE_IMG__/../images/style3-top8.png)';
+//                    }
+//                }
+//            }
+//
+//            let tabEffect1 = 'am-segment-item am-segment-item-selected am-segment_item_selected_0';
+//            let tabEffect2 = 'am-segment-item am-segment_item_selected_1';
+//            tabEffect(am_segment_item, tabEffect1, tabEffect2);
+//        }else {
+//            $('#girl').removeClass('bg-active');
+//            $('#girl').addClass('bg-active_girl');
+//
+//            search_icon.style.backgroundImage = 'url(__MODULE_IMG__/../images/style3_search.png)';
+//
+//            for (let i = 0; i < h3after.length; i++) {
+//                h3after[i].className = 'clearfix h3after girlH3';
+//            }
+//
+//            for (let i = 0; i < h3A.length; i++) {
+//                h3A[i].className = 'more act1ive girlA';
+//            }
+//
+//            for (let i = 0; i < style3_top_tag.length; ++i) {
+//
+//                if (i < 6) {
+//                    if (i < 3) {
+//                        style3_top_tag[i].style.backgroundImage = 'url(__MODULE_IMG__/../images/style3-top' + (i + 1) + '.png)';
+//                    } else {
+//                        style3_top_tag[i].style.backgroundImage = 'url(__MODULE_IMG__/../images/style3-top4.png)';
+//                    }
+//
+//                }
+//
+//                if (i > 5 && i < 12) {
+//                    if (i > 5 && i < 10) {
+//                        style3_top_tag[i].style.backgroundImage = 'url(__MODULE_IMG__/../images/style3-top' + (i - 5) + '.png)';
+//                    } else {
+//                        style3_top_tag[i].style.backgroundImage = 'url(__MODULE_IMG__/../images/style3-top4.png)';
+//                    }
+//                }
+//
+//                if (i > 11 && i < 18) {
+//                    if (i > 11 && i < 16) {
+//                        style3_top_tag[i].style.backgroundImage = 'url(__MODULE_IMG__/../images/style3-top' + (i - 11) + '.png)';
+//                    } else {
+//                        style3_top_tag[i].style.backgroundImage = 'url(__MODULE_IMG__/../images/style3-top4.png)';
+//                    }
+//                }
+//
+//            }
+//
+//            /*for (let i = 0; i < style3_top_tag.length; ++i) {
+//                if (i < 3) {
+//                    style3_top_tag[i].style.backgroundImage = 'url(images/style3-top' + (i + 1) + '.png)';
+//                } else {
+//                    style3_top_tag[i].style.backgroundImage = 'url(images/style3-top4.png)';
+//                }
+//            }*/
+//
+//            let tabEffect1 = 'am-segment-item am-segment-item-selected am-segment_item_selected_00';
+//            let tabEffect2 = 'am-segment-item am-segment_item_selected_11';
+//            tabEffect(am_segment_item, tabEffect1, tabEffect2);
+//        }
+        search_icon.onclick = function () {
+            window.location.href = "{:url('cms/search/index')}";
+        };
+
+    });
+
+
+
+
+    $(window).load(function () {
+        $('#full_feature').swipeslider();
+    });
+
+
+</script>
+</body>
+</html>
